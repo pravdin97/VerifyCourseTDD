@@ -28,4 +28,13 @@ public class FindErrorGameTest {
         answer = game.hasNextTask();
         Assert.assertNotNull(answer);
     }
+
+    @Test
+    public void SetTaskTest() {
+        Game game = new Game();
+        Task setTask = new Task("int main() {}");
+        game.setTask(setTask);
+        Task getTask = game.getNextTask();
+        Assert.assertEquals(setTask, getTask);
+    }
 }
