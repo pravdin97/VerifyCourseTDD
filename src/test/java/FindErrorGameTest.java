@@ -13,4 +13,11 @@ public class FindErrorGameTest {
         Game game = new Game();
         Assert.assertNotNull(game.getNextTask());
     }
+
+    @Test
+    public void TaskGetTextTest() {
+        Game game = new Game();
+        String [] text = game.getNextTask().getText();
+        Assert.assertNotNull(text);
+    }
 }
