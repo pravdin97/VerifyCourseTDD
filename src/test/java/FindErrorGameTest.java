@@ -20,4 +20,12 @@ public class FindErrorGameTest {
         String [] text = game.getNextTask().getText();
         Assert.assertNotNull(text);
     }
+
+    @Test
+    public void HasNextTaskTest() {
+        Game game = new Game();
+        boolean answer;
+        answer = game.hasNextTask();
+        Assert.assertNotNull(answer);
+    }
 }
