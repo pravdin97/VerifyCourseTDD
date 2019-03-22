@@ -1,6 +1,8 @@
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 public class FindErrorGameTest {
     @Test
     public void gameCreationTest() {
@@ -36,5 +38,15 @@ public class FindErrorGameTest {
         game.setTask(setTask);
         Task getTask = game.getNextTask();
         Assert.assertEquals(setTask, getTask);
+    }
+
+    @Test
+    public void SetErrorLineIndexes() {
+        Task task = new Task(new String[] {"int main() {}"});
+        ArrayList<Integer> errorLineIndexes = new ArrayList<Integer>();
+        errorLineIndexes.add(1);
+        task.setErrorLineIndexes(errorLineIndexes);
+        ArrayList<Integer> getErrorLineIndexes = task.getErrorLineIndexes();
+        Assert.assertArrayEquals(errorLineIndexes.toArray(), getErrorLineIndexes.toArray());
     }
 }
