@@ -32,7 +32,7 @@ public class FindErrorGameTest {
     @Test
     public void SetTaskTest() {
         Game game = new Game();
-        Task setTask = new Task("int main() {}");
+        Task setTask = new Task(new String[] {"int main() {}"});
         game.setTask(setTask);
         Task getTask = game.getNextTask();
         Assert.assertEquals(setTask, getTask);
