@@ -3,8 +3,14 @@ import org.junit.Test;
 
 public class FindErrorGameTest {
     @Test
-    void gameCreationTest() {
+    public void gameCreationTest() {
         Game game = new Game();
         Assert.assertNotNull(game);
+    }
+
+    @Test
+    public void getNextTaskTest() {
+        Game game = new Game();
+        Assert.assertNotNull(game.getNextTask());
     }
 }
