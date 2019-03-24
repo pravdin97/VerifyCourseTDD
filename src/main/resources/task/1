@@ -1,0 +1,4 @@
+int main() {
+    doubl d = 2;
+    itn a = 3;
+}

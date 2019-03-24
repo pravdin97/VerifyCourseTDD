@@ -2,6 +2,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 public class FindErrorGameTest {
@@ -50,6 +51,7 @@ public class FindErrorGameTest {
         errorLineIndexes.add(1);
         task.setErrorLineIndexes(errorLineIndexes);
         game.setTask(task);
+        game.getNextTask();
 
         ArrayList<Integer> answers = new ArrayList<Integer>();
         answers.add(1);
@@ -58,7 +60,7 @@ public class FindErrorGameTest {
     }
 
     @Test
-    public void OpenFilesTest() {
+    public void OpenFilesTest() throws FileNotFoundException {
         boolean res = game.fillTasks();
         Assert.assertTrue(res);
     }
