@@ -25,4 +25,12 @@ public class Game {
     public void setTask(Task setTask) {
         tasks.add(setTask);
     }
+
+    public boolean checkAnswers(ArrayList<Integer> answers) {
+        return true;
+    }
+
+    public boolean fillTasks() {
+        return true;
+    }
 }
