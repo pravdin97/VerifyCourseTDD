@@ -56,4 +56,10 @@ public class FindErrorGameTest {
         boolean result = game.checkAnswers(answers);
         Assert.assertTrue(result);
     }
+
+    @Test
+    public void OpenFilesTest() {
+        boolean res = game.fillTasks();
+        Assert.assertTrue(res);
+    }
 }
