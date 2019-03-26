@@ -78,4 +78,8 @@ public class Game {
         }
         return true;
     }
+
+    public void clearTasks() {
+        tasks = new ArrayList<Task>();
+    }
 }

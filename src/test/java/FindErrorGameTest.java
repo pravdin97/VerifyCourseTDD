@@ -28,6 +28,7 @@ public class FindErrorGameTest {
 
     @Test
     public void SetTaskTest() {
+        game.clearTasks();
         Task setTask = new Task(new String[] {"int main() {}"});
         game.setTask(setTask);
         Task getTask = game.getNextTask();
@@ -46,6 +47,7 @@ public class FindErrorGameTest {
 
     @Test
     public void CheckAnswersTest() {
+        game.clearTasks();
         Task task = new Task(new String[] {"int main() {"});
         ArrayList<Integer> errorLineIndexes = new ArrayList<Integer>();
         errorLineIndexes.add(1);
